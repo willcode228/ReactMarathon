@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header/Header';
+import Layout from './components/Layout/Layout';
+import Footer from './components/Footer/Footer';
+
+import img1 from './components/images/layout/bg1.jpg'
+import img2 from './components/images/layout/bg2.jpg'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, how are you?
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Header title="Hello, how are you?" 
+              desc="Welcome to my game"/>
+
+      <Layout title="First player" 
+              desc="Description"
+              urlBg={img1}/>
+
+      <Layout title="Second player" 
+              desc="Description"
+              colorBg="purple"/>
+
+      <Layout title="Third player" 
+              desc="Description"
+              urlBg={img2}/>
+
+      <Footer />
+      
     </div>
   );
 }
